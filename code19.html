@@ -2,30 +2,40 @@
 <html>
     <head></head>
     <style>
-        div{
-            background-color: blue;
-            width: 300px;
-            margin: auto;
-            
-            display: grid;
+        .hello{
+            background-color: tomato;
+            color: white;
+            margin: 30px;
+            padding: 40px;
+            border: 1px solid black;
         }
-        container{
-            background-color: azure;
-            width: 100%;
+        .h1{
+            text-align: center;
+            background-color: aquamarine;
         }
     </style>
     <title></title>
     <body>
-        <div class="container">
-        <div style="background-color: blueviolet;"></div>
-        Good afternoon Hello  welcome you all
-        <p>some background will  be added to the the div </p>
-        <h3>Now we will see the div tag which is applied on the group of sections</h3></div>
-        <div style="background-color: cornflowerblue;">
-            <h2>hello world</h2>
+        <button onclick="myfun()">hide Elements</button>
+        <script>
+            function myfun(){
+                var x = document.getElementsByClassName("hello")
+                for(var i=0;i<=x.length;i++){
+                    x[i].style.display="none";
+                }           
+            }
+        </script>
+        <div class="hello">
+            <h2>Heading 1</h2>
+            <p>this is para </p>
         </div>
-        <div style="background-color: darkgray;">
-            <h2>happy sunday</h2>
+        <div class="hello">
+            <h2>Heading 2</h2>
+            <p>this is para 2</p>
+        </div>
+        <div class="h1">
+            <h2>Heading 3</h2>
+            <p>this is para 3</p>
         </div>
     </body>
 </html>
