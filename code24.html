@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            .helo{
+                background-color: aqua;
+                padding: 50px;
+                float: right;
+                width: 20%;
+            }
+            .helo3{
+                background-color: rgb(85, 255, 0);
+                padding: 50px;
+                float: inherit;
+                width: 20%;
+            }
+            .helo1{
+                background-color: rgb(255, 0, 162);
+                padding: 50px;
+                float: right;
+                width: 20%;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Seting the viewport</h2>
+        <p>paragrapgh</p>
+        <h2>now we will show images as per the browser width</h2>
+        <img src="bgpic.png" alt="image of the background" style="height: auto ; max-width: 100%;">
+        <picture>
+            <source srcset="avt.png" media="(max-width:600px)">
+        </picture>
+        <h1 style="font-size: 10vw;">Responsive</h1>
+        <div class="helo">
+        <p>para 1</p>
+        </div>
+        <div class="helo1">
+            <p>para 2</p>
+        </div>
+
+        <div class="helo3">
+            <p>para 3</p>
+        </div>
+    </body>
+</html>
