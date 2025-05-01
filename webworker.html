@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+            Web worker API
+        </h1>
+        <p>count Number<output id="result"></output></p>
+        <button onclick="startwork()">start</button>
+        <button onclick="stopwork()">stop</button>
+        <script>
+            let w;
+            function startwork(){
+                const x=document.getElementById("result")
+                if(typeof(Worker)!=="undefined"){
+                    if(typeof(w)=="undefined"){
+                        w=new Worker("demo.js")  
+                        
+                    }
+                    w.onmessage=function(event){
+                        x.innerHTML=event.data;
+                    };
+                }   else{
+                    x.innerHTML="Sorry! no wen browser"
+                }
+            }
+            function stopwork(){
+                w.terminate();
+                w=undefined;
+            }
+        </script>
+    </body>
+</html>
