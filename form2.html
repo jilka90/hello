@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>TextArea Grouping From data with Fieldset</h2>
+        <textarea name="message" rows="10" cols="30">hello world</textarea>
+        <textarea name="message" style="width: 200px;height: 200px;"></textarea><br>
+        <input type="submit">
+        <h1>now you can use the button and see the output</h1>
+        <button type="button" onclick="alert('Hello world')">click me!</button>
+
+        <h2>Fieldset</h2>
+        <fieldset>
+            <legend>
+                Personal data
+            </legend>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" value="Sam"><br>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" value="Dubey"><br>
+            <input type="submit" value="submit">
+            
+        </fieldset>
+        <h2>The datalist Element</h2>
+        <form action="index.html">
+            <input list="broswer" name="broswer">
+            <datalist id="broswer">
+                <option value="edge">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Yahoo">
+                    <option value="Opera">
+                </option>
+            </datalist>
+            <input type="submit" value="submit">
+        </form>
+        <h2>The output Element</h2>
+        <form action="index.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range" id="a" name="a" value="50">
+            100+
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br></br>
+            <input type="submit">
+
+        </form>
+    </body>
+</html>
