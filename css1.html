@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        
+       .container{
+        display: grid;
+        grid-template-areas:  "header header "  "menu content" "footer footer";
+        grid-template-columns: 1fr 3fr;
+        background-color: cadetblue;
+        padding:5px;
+        gap: 5px;
+       }
+       .container div{
+        background-color: darkgray;
+        padding: 10px;
+       }
+       .container div.header{
+         grid-area: header;
+         text-align: center;
+       }
+       .container > div.menu{
+        grid-area: menu;
+       }
+       .container > div.content {
+        grid-area: content;
+       }
+       .container > div.footer{
+        grid-area: footer;
+       }
+
+       
+    </style>
+    </head>
+    <body>
+          
+        <!--<div class="con">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>-->
+        <p>Paragrapgh</p>
+        <p>The density of tree cover influences the amount of both sunlight and rainfall reaching every forest layer. A full-canopied forest absorbs between 60 and 90 percent of available light, most of which is absorbed by the leaves for photosynthesis. The movement of rainfall into the forest is considerably influenced by leaf cover, which tends to slow the velocity of falling water, which penetrates down to the ground level by running down tree trunks or dripping from leaves.</p>
+        <div class="container">
+            <div class="header"><h2>Header</h2>
+            </div>
+            <div class="menu">
+                <a href="#">link 1</a><br>
+                <a href="#">link 2</a><br>
+                <a href="#">link 3</a><br>
+                <a href="#">link 4</a>
+            </div>
+            <div class="content">
+                <h3>Content</h3>
+                <p>Soil conditions are distinguished according to depth, fertility, and the presence of perennial roots. Soil depth is important because it determines the extent to which roots can penetrate into the earth and, therefore, the amount of water and nutrients available to the trees. The soil in the taiga is sandy and drains quickly. Deciduous forests have brown soil, richer than sand in nutrients, and less porous. Rainforests and savanna woodlands often have a soil layer rich in iron or aluminum, which give the soils either a reddish or yellowish cast. Given the vast amounts of rain they receive, the soil is often poor in tropical rainforests, as the nutrients are quickly leached away.</p></div>
+            <div class="footer">
+            <h2>This is footer</h2>
+            </div>
+        </div>
+    </body>
+</html>
