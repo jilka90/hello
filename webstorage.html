@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>browser test </h1>
+        <div id="result"></div>
+        <script>
+            const x= document.getElementById("result");
+            if(typeof(Storage)!=="undefined"){
+                localStorage.setItem("lastname","DWS");
+                localStorage.setItem("bgcolor","pink")
+                x.innerHTML=localStorage.getItem("lastname");
+                x.style.backgroundColor=localStorage.getItem("bgcolor");
+            }
+            else{
+                x.innerHTML="sorry can't reach"
+            }
+
+            function clickcounter(){
+                const x=document.getElementById("result");
+                if(typeof(Storage)!=="undefined"){
+                    if(localStorage.clickcount){
+                        localStorage.clickcount=Number(localStorage.clickcount)+1;
+                    }
+                    else{
+                        localStorage.clickcount=1;
+                    }
+                     x.innerHTML="You have clicked the button"+localStorage.clickcount+"times";
+                    }
+                    else{
+                        x.innerHTML="Sorry no support";
+
+                    }
+            } 
+        </script>
+        </head>
+    <body>
+        <h3>localStorage</h3>
+        <button onclick="clickcounter" type="button">Click me </button>
+        <p id="result"></p>
+        <h1>tap to see the count increasing</h1>
+    </body>
+</html>

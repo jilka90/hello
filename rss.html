@@ -7,7 +7,7 @@
             if(typeof(EventSource)!=="undefined"){
                 var source=new EventSource("demo.php")
                 source.onmessage=function(event){
-                    x.innerHTML+=event.data+"<br>"
+                    x.innerHTML+=event.data +"<br>"
                 };
             }
             else{
@@ -16,3 +16,5 @@
         </script>
     </body>
 </html>
+
+  

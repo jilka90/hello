@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+        <body>
+            <h1>Geolocation</h1>
+            <h2>click me</h2>
+            <button onclick="trail()">Click here</button>
+            <p id="demo"></p>
+            <script>
+                const x=document.getElementById("demo");
+                function trail(){
+                    if(navigator.geolocation){
+                        navigator.geolocation.getCurrentPosition(success,error);
+                    }else{
+                        x.innerHTML="NOt supported";
+                    }
+                }
+                function success(position){
+                    x.innerHTML="latitude"+ position.cords.latitude +
+                    "<br> Longitude" + position.cords.longitude;
+                }
+                function error(){
+                    alert("Not found")
+                }
+            </script>
+        </body>
+</html>

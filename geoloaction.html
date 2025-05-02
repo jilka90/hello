@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>GeoLocation</h1>
+        <p>Click the </p>
+        <button onclick="getloc()">Try me</button>
+        <p id="demo"></p>
+        <script>
+            const x=document.getElementById("demo");
+            function getloc(){
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(success,error);
+                } else {
+                    x.innerHTML="Geolocation not supported by this broswer";
+                }
+            }
+            function success(position){
+                x.innerHTML="lattitude" + position.coords.latitude +
+                 "<br> Longitude" + position.coords.longitude;
+            }
+            function error(){
+                alert("sorry no position available")
+            }
+        </script>
+    </body>
+</html>
